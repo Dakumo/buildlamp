@@ -24,8 +24,8 @@ var jenkinsHueColumbus = new JenkinsHue({
 });
 
 function isItWorkingTime() {
-    var dayBegin = moment().hour(8).minute(0);
-    var dayEnd = moment().hour(22).minute(41);
+    var dayBegin = moment().hour(7).minute(0);
+    var dayEnd = moment().hour(19).minute(0);
     var isoWeekdaySaturday = 6;
     var isoWeekdaySunday = 7;
     var now = moment();
