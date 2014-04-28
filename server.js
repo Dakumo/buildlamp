@@ -22,8 +22,8 @@ var jenkinsHueColumbus = new JenkinsHue({
     }
 });
 
-var dayBegin = moment().hour(8).minute(0);
-var dayEnd = moment().hour(20).minute(0);
+var dayBegin = moment().hour(7).minute(0);
+var dayEnd = moment().hour(19).minute(0);
 
 setInterval(function() {
     "use strict";
