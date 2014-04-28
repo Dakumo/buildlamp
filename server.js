@@ -1,4 +1,5 @@
 var JenkinsHue = require('jenkins-hue');
+var moment = require('moment');
 var INTERVAL = 5 * 1000;
 
 var jenkinsHueCongstar = new JenkinsHue({
@@ -21,7 +22,20 @@ var jenkinsHueColumbus = new JenkinsHue({
     }
 });
 
+var dayBegin = moment().hour(8).minute(0);
+var dayEnd = moment().hour(20).minute(0);
+
 setInterval(function() {
+    "use strict";
+
+    if (moment().isBefore(dayBegin) || moment().isAfter(dayEnd)) {
+        console.log(moment().format() + ' SWITCHED OFF');
+        jenkinsHueColumbus.hue.switchOff(1);
+        jenkinsHueColumbus.hue.switchOff(2);
+        jenkinsHueColumbus.hue.switchOff(3);
+        return;
+    }
+
     // Columbus
     jenkinsHueColumbus.setLightForJenkinsView(1);
 
@@ -31,5 +45,5 @@ setInterval(function() {
     // Tisch Florian
     jenkinsHueCongstar.setLightForJenkinsView(3);
 
-	console.log('.');
+	console.log(moment().format() + "TICK");
 }, INTERVAL);
