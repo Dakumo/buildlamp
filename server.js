@@ -4,6 +4,10 @@ var moment = require('moment');
 var INTERVAL = 5 * 1000;
 var switchedOn = true;
 
+var LIGHT_ID_TABLE_ALEX = 1;
+var LIGHT_ID_TABLE_BILAL = 2;
+var LIGHT_ID_TABLE_FLORIAN = 3;
+
 var jenkinsHueCongstar = new JenkinsHue({
     jenkins: {
         host: 'http://monitoring:andy4711congo@development-congstar.aoe-works.de:8080/view/%20%20Congstar/view/Monitoring'
@@ -25,33 +29,45 @@ var jenkinsHueColumbus = new JenkinsHue({
 });
 
 function updateLights() {
-    // Columbus
-    jenkinsHueColumbus.setLightForJenkinsView(1);
-
-    // Tisch Bilal
-    jenkinsHueCongstar.setLightForJenkinsView(2);
-
-    // Tisch Florian
-    jenkinsHueCongstar.setLightForJenkinsView(3);
+    jenkinsHueColumbus.setLightForJenkinsView(LIGHT_ID_TABLE_ALEX);
+    jenkinsHueCongstar.setLightForJenkinsView(LIGHT_ID_TABLE_BILAL);
+    jenkinsHueCongstar.setLightForJenkinsView(LIGHT_ID_TABLE_FLORIAN);
 }
 
-setInterval(function() {
-    "use strict";
+function switchLightsOn() {
+    updateLights();
+    switchedOn = true;
+}
 
+function switchLightsOff() {
+    jenkinsHueCongstar.hue.switchOff(1);
+    jenkinsHueCongstar.hue.switchOff(2);
+    jenkinsHueCongstar.hue.switchOff(3);
+    switchedOn = false;
+}
+
+function controlLightsInOffice(){
     if (officeHours.isItWorkingTime()) {
-        if (switchedOn === false) {
-            switchedOn = true;
+        if (switchedOn === true) {
+            updateLights();            
+            console.log(moment().format(), "LIGHTS UPDATED");
+        } else {
+            switchLightsOn();
             console.log(moment().format(), "LIGHTS SWITCHED ON");
         }
-        updateLights();
-        console.log(moment().format(), "LIGHTS UPDATED");
     } else {
         if (switchedOn === true) {
-            jenkinsHueCongstar.hue.switchOff(1);
-            jenkinsHueCongstar.hue.switchOff(2);
-            jenkinsHueCongstar.hue.switchOff(3);
-            switchedOn = false;
+            switchLightsOff();
             console.log(moment().format(), "LIGHTS SWITCHED OFF");
         }
     }
-}, INTERVAL);
+}
+
+setInterval(controlLightsInOffice, INTERVAL);
+
+module.exports = {
+    isSwitchedOn: function() {
+        return switchedOn;
+    },
+    controlLightsInOffice: controlLightsInOffice
+}
