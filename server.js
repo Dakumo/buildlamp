@@ -1,4 +1,5 @@
 var JenkinsHue = require('jenkins-hue');
+var officeHours = require('./officeHours')
 var moment = require('moment');
 var INTERVAL = 5 * 1000;
 var switchedOn = true;
@@ -23,23 +24,6 @@ var jenkinsHueColumbus = new JenkinsHue({
     }
 });
 
-function isItWorkingTime() {
-    var dayBegin = moment().hour(7).minute(0);
-    var dayEnd = moment().hour(19).minute(0);
-    var isoWeekdaySaturday = 6;
-    var isoWeekdaySunday = 7;
-    var now = moment();
-
-    if (now.isBefore(dayBegin) ||
-        now.isAfter(dayEnd) ||
-        now.isoWeekday() === isoWeekdaySaturday ||
-        now.isoWeekday() === isoWeekdaySunday) {
-        return false;
-    }
-
-    return true;
-}
-
 function updateLights() {
     // Columbus
     jenkinsHueColumbus.setLightForJenkinsView(1);
@@ -54,7 +38,7 @@ function updateLights() {
 setInterval(function() {
     "use strict";
 
-    if (isItWorkingTime()) {
+    if (officeHours.isItWorkingTime()) {
         if (switchedOn === false) {
             switchedOn = true;
             console.log(moment().format(), "LIGHTS SWITCHED ON");
