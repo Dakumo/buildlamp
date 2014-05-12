@@ -1,5 +1,7 @@
+'use strict';
+
 var JenkinsHue = require('jenkins-hue');
-var officeHours = require('./officeHours')
+var officeHours = require('./officeHours');
 var moment = require('moment');
 var INTERVAL = 5 * 1000;
 var switchedOn = true;
@@ -70,4 +72,4 @@ module.exports = {
         return switchedOn;
     },
     controlLightsInOffice: controlLightsInOffice
-}
+};
