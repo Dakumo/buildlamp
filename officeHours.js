@@ -1,3 +1,5 @@
+'use strict';
+
 var moment = require('moment');
 
 function isItWorkingTime(date) {
@@ -19,4 +21,4 @@ function isItWorkingTime(date) {
 
 module.exports = {
     isItWorkingTime: isItWorkingTime
-}
+};
