@@ -3,7 +3,7 @@
 var JenkinsHue = require('jenkins-hue');
 var officeHours = require('./officeHours');
 var moment = require('moment');
-var INTERVAL = 5 * 1000;
+var INTERVAL = 15 * 1000;
 var switchedOn = true;
 
 var LIGHT_ID_TABLE_ALEX = 1;
@@ -65,6 +65,7 @@ function controlLightsInOffice(){
     }
 }
 
+controlLightsInOffice();
 setInterval(controlLightsInOffice, INTERVAL);
 
 module.exports = {

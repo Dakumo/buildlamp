@@ -1,6 +1,6 @@
 {
   "name": "aoe-build-lights",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "",
   "main": "server.js",
   "scripts": {
@@ -15,10 +15,11 @@
   "license": "BSD-2-Clause",
   "dependencies": {
     "moment": "~2.6.0",
-    "jenkins-hue": "~0.1.0"
+    "jenkins-hue": "~0.3.0"
   },
   "devDependencies": {
     "forever": "~0.11.1",
-    "sinon": "~1.9.1"
+    "sinon": "~1.9.1",
+    "mocha": "~1.18.2"
   }
 }
