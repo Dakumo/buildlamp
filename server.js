@@ -12,7 +12,7 @@ var LIGHT_ID_TABLE_FLORIAN = 3;
 
 var jenkinsHueCongstar = new JenkinsHue({
     jenkins: {
-        host: 'http://monitoring:andy4711congo@integration-congstar.aoe-works.de:8080/view/Congo/view/Monitoring/'
+        host: 'http://monitoring:andy4711congo@congstar.itg.de2.dc.aoe.lan:8080/view/Congo/view/Monitoring/'
     },
     hue: {
         host: '10.165.103.252',
@@ -22,7 +22,7 @@ var jenkinsHueCongstar = new JenkinsHue({
 
 var jenkinsHueColumbus = new JenkinsHue({
     jenkins: {
-        host: 'http://monitoring:andy4711congo@integration-congstar.aoe-works.de:8080/view/Cobra/view/Monitoring/'
+        host: 'http://monitoring:andy4711congo@congstar.itg.de2.dc.aoe.lan:8080/view/Cobra/view/Monitoring/'
     },
     hue: {
         host: '10.165.103.252',
