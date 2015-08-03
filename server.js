@@ -9,6 +9,8 @@ var switchedOn = true;
 var LIGHT_ID_TABLE_ALEX = 1;
 var LIGHT_ID_TABLE_BILAL = 2;
 var LIGHT_ID_TABLE_FLORIAN = 3;
+var LIGHT_ID_TABLE_STEFAN = 4;
+var LIGHT_ID_TABLE_SILAS = 5;
 
 var jenkinsHueCongstar = new JenkinsHue({
     jenkins: {
@@ -32,8 +34,10 @@ var jenkinsHueColumbus = new JenkinsHue({
 
 function updateLights() {
 	jenkinsHueCongstar.setLightForJenkinsView(LIGHT_ID_TABLE_ALEX);
-    jenkinsHueCongstar.setLightForJenkinsView(LIGHT_ID_TABLE_BILAL);
+  jenkinsHueCongstar.setLightForJenkinsView(LIGHT_ID_TABLE_BILAL);
 	jenkinsHueCongstar.setLightForJenkinsView(LIGHT_ID_TABLE_FLORIAN);
+  jenkinsHueCongstar.setLightForJenkinsView(LIGHT_ID_TABLE_STEFAN);
+  jenkinsHueCongstar.setLightForJenkinsView(LIGHT_ID_TABLE_SILAS);
 }
 
 function switchLightsOn() {
@@ -45,13 +49,15 @@ function switchLightsOff() {
     jenkinsHueCongstar.hue.switchOff(1);
     jenkinsHueCongstar.hue.switchOff(2);
     jenkinsHueCongstar.hue.switchOff(3);
+    jenkinsHueCongstar.hue.switchOff(4);
+    jenkinsHueCongstar.hue.switchOff(5);
     switchedOn = false;
 }
 
 function controlLightsInOffice(){
     if (officeHours.isItWorkingTime()) {
         if (switchedOn === true) {
-            updateLights();            
+            updateLights();
             console.log(moment().format(), "LIGHTS UPDATED");
         } else {
             switchLightsOn();
