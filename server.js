@@ -9,7 +9,7 @@ var switchedOn = true;
 var LIGHT_ID_TABLE_ALEX = 1;
 var LIGHT_ID_TABLE_BILAL = 2;
 var LIGHT_ID_TABLE_FLORIAN = 3;
-var LIGHT_ID_TABLE_STEFAN = 4;
+var LIGHT_ID_TABLE_STEFAN = 6;
 var LIGHT_ID_TABLE_SILAS = 5;
 
 var jenkinsHueCongstar = new JenkinsHue({
@@ -32,12 +32,22 @@ var jenkinsHueColumbus = new JenkinsHue({
     }
 });
 
+var jenkinsHueCobraAw = new JenkinsHue({
+    jenkins: {
+        host: 'http://monitoring:andy4711congo@congstar-jenkins.itg.de2.dc.aoe.lan:8080/view/Cobra%20(Active%20Wholebuy)/view/Monitoring/'
+    },
+    hue: {
+        host: '10.165.103.252',
+        username: 'newdeveloper'
+    }
+})
+
 function updateLights() {
-	jenkinsHueCongstar.setLightForJenkinsView(LIGHT_ID_TABLE_ALEX);
-  jenkinsHueCongstar.setLightForJenkinsView(LIGHT_ID_TABLE_BILAL);
-	jenkinsHueCongstar.setLightForJenkinsView(LIGHT_ID_TABLE_FLORIAN);
-  jenkinsHueCongstar.setLightForJenkinsView(LIGHT_ID_TABLE_STEFAN);
-  jenkinsHueCongstar.setLightForJenkinsView(LIGHT_ID_TABLE_SILAS);
+    jenkinsHueCongstar.setLightForJenkinsView(LIGHT_ID_TABLE_ALEX);
+    jenkinsHueCongstar.setLightForJenkinsView(LIGHT_ID_TABLE_BILAL);
+    jenkinsHueCongstar.setLightForJenkinsView(LIGHT_ID_TABLE_FLORIAN);
+    jenkinsHueCobraAw.setLightForJenkinsView(LIGHT_ID_TABLE_STEFAN);
+    jenkinsHueCongstar.setLightForJenkinsView(LIGHT_ID_TABLE_SILAS);
 }
 
 function switchLightsOn() {
@@ -49,7 +59,7 @@ function switchLightsOff() {
     jenkinsHueCongstar.hue.switchOff(1);
     jenkinsHueCongstar.hue.switchOff(2);
     jenkinsHueCongstar.hue.switchOff(3);
-    jenkinsHueCongstar.hue.switchOff(4);
+    jenkinsHueCongstar.hue.switchOff(6);
     jenkinsHueCongstar.hue.switchOff(5);
     switchedOn = false;
 }
