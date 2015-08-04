@@ -42,12 +42,22 @@ var jenkinsHueCobraAw = new JenkinsHue({
     }
 })
 
+var jenkinsHueApp = new JenkinsHue({
+    jenkins: {
+        host: 'http://monitoring:andy4711congo@congstar-jenkins.itg.de2.dc.aoe.lan:8080/view/App/view/Monitoring%20(Lampe)/'
+    },
+    hue: {
+        host: '10.165.103.252',
+        username: 'newdeveloper'
+    }
+})
+
 function updateLights() {
     jenkinsHueCongstar.setLightForJenkinsView(LIGHT_ID_TABLE_ALEX);
     jenkinsHueCongstar.setLightForJenkinsView(LIGHT_ID_TABLE_BILAL);
     jenkinsHueCongstar.setLightForJenkinsView(LIGHT_ID_TABLE_FLORIAN);
     jenkinsHueCobraAw.setLightForJenkinsView(LIGHT_ID_TABLE_STEFAN);
-    jenkinsHueCongstar.setLightForJenkinsView(LIGHT_ID_TABLE_SILAS);
+    jenkinsHueApp.setLightForJenkinsView(LIGHT_ID_TABLE_SILAS);
 }
 
 function switchLightsOn() {
