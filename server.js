@@ -11,6 +11,7 @@ var LIGHT_ID_TABLE_BILAL = 2;
 var LIGHT_ID_TABLE_FLORIAN = 3;
 var LIGHT_ID_TABLE_STEFAN = 6;
 var LIGHT_ID_TABLE_SILAS = 5;
+var LIGHT_ID_TABLE_TORSTEN = 7;
 
 var jenkinsHueCongstar = new JenkinsHue({
     jenkins: {
@@ -56,6 +57,7 @@ function updateLights() {
     jenkinsHueCongstar.setLightForJenkinsView(LIGHT_ID_TABLE_ALEX);
     jenkinsHueCongstar.setLightForJenkinsView(LIGHT_ID_TABLE_BILAL);
     jenkinsHueCongstar.setLightForJenkinsView(LIGHT_ID_TABLE_FLORIAN);
+    jenkinsHueCongstar.setLightForJenkinsView(LIGHT_ID_TABLE_TORSTEN);
     jenkinsHueCobraAw.setLightForJenkinsView(LIGHT_ID_TABLE_STEFAN);
     jenkinsHueApp.setLightForJenkinsView(LIGHT_ID_TABLE_SILAS);
 }
