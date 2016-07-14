@@ -80,11 +80,13 @@ function switchLightsOn() {
 }
 
 function switchLightsOff() {
-    jenkinsHueCongstar.hue.switchOff(1);
-    jenkinsHueCongstar.hue.switchOff(2);
-    jenkinsHueCongstar.hue.switchOff(3);
-    jenkinsHueCongstar.hue.switchOff(6);
-    jenkinsHueCongstar.hue.switchOff(5);
+    jenkinsHueCongstar.hue.switchOff(LIGHT_ID_TABLE_ALEX);
+    jenkinsHueCongstar.hue.switchOff(LIGHT_ID_TABLE_BILAL);
+    jenkinsHueCongstar.hue.switchOff(LIGHT_ID_TABLE_FLORIAN);
+    jenkinsHueCongstar.hue.switchOff(LIGHT_ID_TABLE_TORSTEN);
+    jenkinsHueCongstar.hue.switchOff(LIGHT_ID_TABLE_STEFAN);
+    jenkinsHueCongstar.hue.switchOff(LIGHT_ID_TABLE_SILAS);
+    jenkinsHueCongstar.hue.switchOff(LIGHT_ID_PIPELINE);
     switchedOn = false;
 }
 
