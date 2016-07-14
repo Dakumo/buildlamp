@@ -56,7 +56,7 @@ var jenkinsHueApp = new JenkinsHue({
 
 var jenkinsHueAppPipeline = new JenkinsHue({
     jenkins: {
-        host: 'http://congstar-congo.itg.de2.dc.aoe.lan:8080/view/Congo%20Monitoring/view/Pipeline/'
+        host: 'http://monitoring:andy4711congo@congstar-congo.itg.de2.dc.aoe.lan:8080/view/Congo%20Monitoring/view/Pipeline/'
     },
     hue: {
         host: '10.165.103.252',
