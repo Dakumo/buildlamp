@@ -12,6 +12,7 @@ var LIGHT_ID_TABLE_FLORIAN = 3;
 var LIGHT_ID_TABLE_STEFAN = 6;
 var LIGHT_ID_TABLE_SILAS = 5;
 var LIGHT_ID_TABLE_TORSTEN = 7;
+var LIGHT_ID_PIPELINE = 8;
 
 var jenkinsHueCongstar = new JenkinsHue({
     jenkins: {
@@ -53,6 +54,16 @@ var jenkinsHueApp = new JenkinsHue({
     }
 })
 
+var jenkinsHueAppPipeline = new JenkinsHue({
+    jenkins: {
+        host: 'http://congstar-congo.itg.de2.dc.aoe.lan:8080/view/Congo%20Monitoring/view/Pipeline/'
+    },
+    hue: {
+        host: '10.165.103.252',
+        username: 'newdeveloper'
+    }
+})
+
 function updateLights() {
     jenkinsHueCongstar.setLightForJenkinsView(LIGHT_ID_TABLE_ALEX);
     jenkinsHueCongstar.setLightForJenkinsView(LIGHT_ID_TABLE_BILAL);
@@ -60,6 +71,7 @@ function updateLights() {
     jenkinsHueCongstar.setLightForJenkinsView(LIGHT_ID_TABLE_TORSTEN);
     jenkinsHueCobraAw.setLightForJenkinsView(LIGHT_ID_TABLE_STEFAN);
     jenkinsHueApp.setLightForJenkinsView(LIGHT_ID_TABLE_SILAS);
+    jenkinsHueAppPipeline.setLightForJenkinsView(LIGHT_ID_PIPELINE);
 }
 
 function switchLightsOn() {
