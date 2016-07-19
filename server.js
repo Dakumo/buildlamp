@@ -42,7 +42,7 @@ var jenkinsHueCobraAw = new JenkinsHue({
         host: '10.165.103.252',
         username: 'newdeveloper'
     }
-})
+});
 
 var jenkinsHueApp = new JenkinsHue({
     jenkins: {
@@ -52,7 +52,7 @@ var jenkinsHueApp = new JenkinsHue({
         host: '10.165.103.252',
         username: 'newdeveloper'
     }
-})
+});
 
 var jenkinsHueAppPipeline = new JenkinsHue({
     jenkins: {
@@ -62,7 +62,7 @@ var jenkinsHueAppPipeline = new JenkinsHue({
         host: '10.165.103.252',
         username: 'newdeveloper'
     }
-})
+});
 
 function updateLights() {
     jenkinsHueCongstar.setLightForJenkinsView(LIGHT_ID_TABLE_ALEX);
@@ -91,7 +91,7 @@ function switchLightsOff() {
 }
 
 function controlLightsInOffice(){
-    if (officeHours.isItWorkingTime()) {
+    if (true || officeHours.isItWorkingTime()) {
         if (switchedOn === true) {
             updateLights();
             console.log(moment().format(), "LIGHTS UPDATED");
