@@ -91,7 +91,7 @@ function switchLightsOff() {
 }
 
 function controlLightsInOffice(){
-    if (true || officeHours.isItWorkingTime()) {
+    if (officeHours.isItWorkingTime()) {
         if (switchedOn === true) {
             updateLights();
             console.log(moment().format(), "LIGHTS UPDATED");
