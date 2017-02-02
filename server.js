@@ -18,7 +18,8 @@ var LIGHT_ID_TEAM_3 = 9;
 /// congo
 var jenkinsHueCongstarTeam3 = new JenkinsHue({
     jenkins: {
-        host: 'http://monitoring:andy4711congo@congstar-congo.itg.de2.dc.aoe.lan:8080/view/Congo%20Monitoring/view/Team%203/'
+        // API Token authentication, password in PWD
+        host: 'http://congo.monitoring:cb92f646386df9ef24f4ee1d3918d1b2@congstar-jenkins.itg.de2.dc.aoe.lan:8080/view/Congo%20Monitoring/view/Team%203/'
     },
     hue: {
         host: '10.165.103.252',
