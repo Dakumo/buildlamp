@@ -28,7 +28,7 @@ var jenkinsHueCongstarTeam3 = new JenkinsHue({
 });
 var jenkinsHueCongstarTeam7 = new JenkinsHue({
     jenkins: {
-        host: 'http://monitoring:andy4711congo@congstar-congo.itg.de2.dc.aoe.lan:8080/view/Congo%20Monitoring/view/Team%207/'
+        host: 'http://congo.monitoring:cb92f646386df9ef24f4ee1d3918d1b2@congstar-jenkins.itg.de2.dc.aoe.lan:8080/view/Congo%20Monitoring/view/Team%207/'
     },
     hue: {
         host: '10.165.103.252',
@@ -37,7 +37,7 @@ var jenkinsHueCongstarTeam7 = new JenkinsHue({
 });
 var jenkinsHueCongstarTeam10 = new JenkinsHue({
     jenkins: {
-        host: 'http://monitoring:andy4711congo@congstar-congo.itg.de2.dc.aoe.lan:8080/view/Congo%20Monitoring/view/Team%2010/'
+        host: 'http://congo.monitoring:cb92f646386df9ef24f4ee1d3918d1b2@congstar-jenkins.itg.de2.dc.aoe.lan:8080/view/Congo%20Monitoring/view/Team%2010/'
     },
     hue: {
         host: '10.165.103.252',
@@ -46,7 +46,7 @@ var jenkinsHueCongstarTeam10 = new JenkinsHue({
 });
 var jenkinsHueCongstarTeam12 = new JenkinsHue({
     jenkins: {
-        host: 'http://monitoring:andy4711congo@congstar-congo.itg.de2.dc.aoe.lan:8080/view/Congo%20Monitoring/view/Team%2012/'
+        host: 'http://congo.monitoring:cb92f646386df9ef24f4ee1d3918d1b2@congstar-jenkins.itg.de2.dc.aoe.lan:8080/view/Congo%20Monitoring/view/Team%2012/'
     },
     hue: {
         host: '10.165.103.252',
