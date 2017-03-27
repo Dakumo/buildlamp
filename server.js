@@ -64,19 +64,10 @@ var jenkinsHuePipeline = new JenkinsHue({
 });
 
 //////
-var jenkinsHueColumbus = new JenkinsHue({
-    jenkins: {
-        host: 'http://monitoring:andy4711congo@congstar-congo.itg.de2.dc.aoe.lan:8080/view/Cobra/view/Monitoring/'
-    },
-    hue: {
-        host: '10.165.103.252',
-        username: 'newdeveloper'
-    }
-});
 
 var jenkinsHueCobraAw = new JenkinsHue({
     jenkins: {
-        host: 'http://monitoring:andy4711congo@congstar-jenkins.itg.de2.dc.aoe.lan:8080/view/Cobra%20(Active%20Wholebuy)/view/Monitoring/'
+        host: 'http://congstar-jenkins.itg.de2.dc.aoe.lan:8080/view/Cobra/view/Monitoring/'
     },
     hue: {
         host: '10.165.103.252',
