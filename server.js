@@ -64,10 +64,9 @@ var jenkinsHuePipeline = new JenkinsHue({
 });
 
 //////
-
 var jenkinsHueCobraAw = new JenkinsHue({
     jenkins: {
-        host: 'http://congstar-jenkins.itg.de2.dc.aoe.lan:8080/view/Cobra/view/Monitoring/'
+        host: 'http://congo.monitoring:cb92f646386df9ef24f4ee1d3918d1b2@congstar-jenkins.itg.de2.dc.aoe.lan:8080/view/Cobra/view/Monitoring/'
     },
     hue: {
         host: '10.165.103.252',
