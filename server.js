@@ -9,7 +9,8 @@ var switchedOn = true;
 var LIGHT_ID_TABLE_ALEX = 1;
 var LIGHT_ID_TABLE_BILAL = 2;
 var LIGHT_ID_TABLE_FLORIAN = 3;
-var LIGHT_ID_TABLE_STEFAN = 6;
+var LIGHT_ID_TABLE_COBR_AW_1 = 6;
+var LIGHT_ID_TABLE_COBR_AW_2 = 10;
 var LIGHT_ID_TABLE_SILAS = 5;
 var LIGHT_ID_TABLE_TORSTEN = 7;
 
@@ -65,7 +66,17 @@ var jenkinsHuePipeline = new JenkinsHue({
 });
 
 //////
-var jenkinsHueCobraAw = new JenkinsHue({
+var jenkinsHueCobraAwDev = new JenkinsHue({
+    jenkins: {
+        host: 'http://congo.monitoring:cb92f646386df9ef24f4ee1d3918d1b2@congstar-jenkins.itg.de2.dc.aoe.lan:8080/view/Cobra/view/Monitoring/'
+    },
+    hue: {
+        host: '10.165.103.252',
+        username: 'newdeveloper'
+    }
+});
+
+var jenkinsHueCobraAwTa = new JenkinsHue({
     jenkins: {
         host: 'http://congo.monitoring:cb92f646386df9ef24f4ee1d3918d1b2@congstar-jenkins.itg.de2.dc.aoe.lan:8080/view/Cobra/view/Monitoring/'
     },
@@ -93,7 +104,8 @@ function updateLights() {
     jenkinsHueCongstarTeam7.setLightForJenkinsView(LIGHT_ID_TABLE_FLORIAN);
     jenkinsHueCongstarTeam12.setLightForJenkinsView(LIGHT_ID_TABLE_TORSTEN);
     jenkinsHueCongstarTeam3.setLightForJenkinsView(LIGHT_ID_TEAM_3);
-    jenkinsHueCobraAw.setLightForJenkinsView(LIGHT_ID_TABLE_STEFAN);
+    jenkinsHueCobraAwDev.setLightForJenkinsView(LIGHT_ID_TABLE_COBR_AW_1);
+    jenkinsHueCobraAwTa.setLightForJenkinsView(LIGHT_ID_TABLE_COBR_AW_2);
     jenkinsHueApp.setLightForJenkinsView(LIGHT_ID_TABLE_SILAS);
     jenkinsHuePipeline.setLightForJenkinsView(LIGHT_ID_PIPELINE);
 }
@@ -109,7 +121,8 @@ function switchLightsOff() {
     jenkinsHueCongstarTeam7.hue.switchOff(LIGHT_ID_TABLE_FLORIAN);
     jenkinsHueCongstarTeam12.hue.switchOff(LIGHT_ID_TABLE_TORSTEN);
     jenkinsHueCongstarTeam3.hue.switchOff(LIGHT_ID_TEAM_3);
-    jenkinsHueCobraAw.hue.switchOff(LIGHT_ID_TABLE_STEFAN);
+    jenkinsHueCobraAwDev.hue.switchOff(LIGHT_ID_TABLE_COBR_AW_1);
+    jenkinsHueCobraAwTa.hue.switchOff(LIGHT_ID_TABLE_COBR_AW_2);
     jenkinsHueApp.hue.switchOff(LIGHT_ID_TABLE_SILAS);
     jenkinsHuePipeline.hue.switchOff(LIGHT_ID_PIPELINE);
     switchedOn = false;
