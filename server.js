@@ -17,6 +17,8 @@ var LIGHT_ID_TABLE_TORSTEN = 7;
 var LIGHT_ID_PIPELINE = 8;
 var LIGHT_ID_TEAM_3 = 9;
 
+var LIGHT_ID_TYPO3_UPGRADE = 12;
+
 /// congo
 var jenkinsHueCongstarTeam3 = new JenkinsHue({
     jenkins: {
@@ -58,6 +60,16 @@ var jenkinsHueCongstarTeam12 = new JenkinsHue({
 var jenkinsHuePipeline = new JenkinsHue({
     jenkins: {
         host: 'http://monitoring:andy4711congo@congstar-congo.itg.de2.dc.aoe.lan:8080/view/Congo%20Monitoring/view/Pipeline/'
+    },
+    hue: {
+        host: '10.165.103.252',
+        username: 'newdeveloper'
+    }
+});
+
+var jenkinsHueCongstarTeamTYPO3Upgrade = new JenkinsHue({
+    jenkins: {
+        host: 'http://congo.monitoring:cb92f646386df9ef24f4ee1d3918d1b2@congstar-jenkins.itg.de2.dc.aoe.lan:8080/view/Congo%20Monitoring/view/Team%20Upgrade/'
     },
     hue: {
         host: '10.165.103.252',
@@ -108,6 +120,7 @@ function updateLights() {
     jenkinsHueCobraAwTa.setLightForJenkinsView(LIGHT_ID_TABLE_COBR_AW_2);
     jenkinsHueApp.setLightForJenkinsView(LIGHT_ID_TABLE_SILAS);
     jenkinsHuePipeline.setLightForJenkinsView(LIGHT_ID_PIPELINE);
+    jenkinsHueCongstarTeamTYPO3Upgrade.setLightForJenkinsView(LIGHT_ID_TYPO3_UPGRADE);
 }
 
 function switchLightsOn() {
@@ -125,6 +138,7 @@ function switchLightsOff() {
     jenkinsHueCobraAwTa.hue.switchOff(LIGHT_ID_TABLE_COBR_AW_2);
     jenkinsHueApp.hue.switchOff(LIGHT_ID_TABLE_SILAS);
     jenkinsHuePipeline.hue.switchOff(LIGHT_ID_PIPELINE);
+    jenkinsHueCongstarTeamTYPO3Upgrade.hue.switchOff(LIGHT_ID_TYPO3_UPGRADE);
     switchedOn = false;
 }
 
