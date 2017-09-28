@@ -59,7 +59,7 @@ var jenkinsHueCongstarTeam12 = new JenkinsHue({
 });
 var jenkinsHuePipeline = new JenkinsHue({
     jenkins: {
-        host: 'http://monitoring:andy4711congo@congstar-congo.itg.de2.dc.aoe.lan:8080/view/Congo%20Monitoring/view/Pipeline/'
+        host: 'http://congo.monitoring:cb92f646386df9ef24f4ee1d3918d1b2@congstar-jenkins.itg.de2.dc.aoe.lan:8080/view/Congo%20Monitoring/view/Pipeline/'
     },
     hue: {
         host: '10.165.103.252',
