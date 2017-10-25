@@ -23,7 +23,7 @@ var LIGHT_ID_TYPO3_UPGRADE = 12;
 var jenkinsHueCongstarTeam3 = new JenkinsHue({
     jenkins: {
         // API Token authentication, password in PWD
-        host: 'http://congo.monitoring:cb92f646386df9ef24f4ee1d3918d1b2@congstar-jenkins.itg.de2.dc.aoe.lan:8080/view/Congo%20Monitoring/view/Team%203/'
+        host: 'http://congostar-congo-ci.proxy/view/Congo%20Monitoring/view/Team%203/'
     },
     hue: {
         host: '10.165.103.252',
@@ -32,7 +32,7 @@ var jenkinsHueCongstarTeam3 = new JenkinsHue({
 });
 var jenkinsHueCongstarTeam7 = new JenkinsHue({
     jenkins: {
-        host: 'http://congo.monitoring:cb92f646386df9ef24f4ee1d3918d1b2@congstar-jenkins.itg.de2.dc.aoe.lan:8080/view/Congo%20Monitoring/view/Team%207/'
+        host: 'http://congostar-congo-ci.proxy/view/Congo%20Monitoring/view/Team%207/'
     },
     hue: {
         host: '10.165.103.252',
@@ -41,7 +41,7 @@ var jenkinsHueCongstarTeam7 = new JenkinsHue({
 });
 var jenkinsHueCongstarTeam10 = new JenkinsHue({
     jenkins: {
-        host: 'http://congo.monitoring:cb92f646386df9ef24f4ee1d3918d1b2@congstar-jenkins.itg.de2.dc.aoe.lan:8080/view/Congo%20Monitoring/view/Team%2010/'
+        host: 'http://congostar-congo-ci.proxy/view/Congo%20Monitoring/view/Team%2010/'
     },
     hue: {
         host: '10.165.103.252',
@@ -50,7 +50,7 @@ var jenkinsHueCongstarTeam10 = new JenkinsHue({
 });
 var jenkinsHueCongstarTeam12 = new JenkinsHue({
     jenkins: {
-        host: 'http://congo.monitoring:cb92f646386df9ef24f4ee1d3918d1b2@congstar-jenkins.itg.de2.dc.aoe.lan:8080/view/Congo%20Monitoring/view/Team%2012/'
+        host: 'http://congostar-congo-ci.proxy/view/Congo%20Monitoring/view/Team%2012/'
     },
     hue: {
         host: '10.165.103.252',
@@ -59,7 +59,7 @@ var jenkinsHueCongstarTeam12 = new JenkinsHue({
 });
 var jenkinsHuePipeline = new JenkinsHue({
     jenkins: {
-        host: 'http://congo.monitoring:cb92f646386df9ef24f4ee1d3918d1b2@congstar-jenkins.itg.de2.dc.aoe.lan:8080/view/Congo%20Monitoring/view/Pipeline/'
+        host: 'http://congostar-congo-ci.proxy/view/Congo%20Monitoring/view/Pipeline/'
     },
     hue: {
         host: '10.165.103.252',
@@ -69,7 +69,7 @@ var jenkinsHuePipeline = new JenkinsHue({
 
 var jenkinsHueCongstarTeamTYPO3Upgrade = new JenkinsHue({
     jenkins: {
-        host: 'http://congo.monitoring:cb92f646386df9ef24f4ee1d3918d1b2@congstar-jenkins.itg.de2.dc.aoe.lan:8080/view/Congo%20Monitoring/view/Team%20Upgrade/'
+        host: 'http://congostar-congo-ci.proxy/view/Congo%20Monitoring/view/Team%20Upgrade/'
     },
     hue: {
         host: '10.165.103.252',
@@ -80,7 +80,7 @@ var jenkinsHueCongstarTeamTYPO3Upgrade = new JenkinsHue({
 //////
 var jenkinsHueCobraAwDev = new JenkinsHue({
     jenkins: {
-        host: 'http://congo.monitoring:cb92f646386df9ef24f4ee1d3918d1b2@congstar-jenkins.itg.de2.dc.aoe.lan:8080/view/Cobra/view/Monitoring/'
+        host: 'http://congostar-congo-ci.proxy/view/Cobra/view/Monitoring/'
     },
     hue: {
         host: '10.165.103.252',
@@ -90,7 +90,7 @@ var jenkinsHueCobraAwDev = new JenkinsHue({
 
 var jenkinsHueCobraAwTa = new JenkinsHue({
     jenkins: {
-        host: 'http://congo.monitoring:cb92f646386df9ef24f4ee1d3918d1b2@congstar-jenkins.itg.de2.dc.aoe.lan:8080/view/Cobra/view/Monitoring/'
+        host: 'http://congostar-congo-ci.proxy/view/Cobra/view/Monitoring/'
     },
     hue: {
         host: '10.165.103.252',
@@ -100,7 +100,7 @@ var jenkinsHueCobraAwTa = new JenkinsHue({
 
 var jenkinsHueApp = new JenkinsHue({
     jenkins: {
-        host: 'http://monitoring:andy4711congo@congstar-jenkins.itg.de2.dc.aoe.lan:8080/view/App/view/Monitoring%20(Lampe)/'
+        host: 'http://congostar-congo-ci.proxy/view/App/view/Monitoring%20(Lampe)/'
     },
     hue: {
         host: '10.165.103.252',
