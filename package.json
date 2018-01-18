@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha test",
-    "start": "forever stop server.js && forever start -a server.js"
+    "start": "forever start -a server.js",
+    "stop": "forever stop server.js",
+    "restart": "forever stop server.js && forever start -a server.js"
   },
   "repository": {
     "type": "git",
