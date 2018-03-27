@@ -17,7 +17,6 @@ var LIGHT_ID_TABLE_TORSTEN = 7;
 var LIGHT_ID_PIPELINE = 8;
 var LIGHT_ID_TEAM_3 = 9;
 var LIGHT_ID_DONNA_TEAM_12 = 12;
-var LIGHT_ID_TEAM_14 = 13;
 
 /// congo
 var jenkinsHueCongstarTeam3 = new JenkinsHue({
@@ -60,15 +59,6 @@ var jenkinsHueCongstarTeam12 = new JenkinsHue({
 var jenkinsHueCongstarTeam12Donna = new JenkinsHue({
     jenkins: {
         host: 'http://congostar-congo-ci.proxy/view/Congo%20Monitoring/view/Team%2012%20-%20Acceptance%20Tests/'
-    },
-    hue: {
-        host: '10.165.103.252',
-        username: 'newdeveloper'
-    }
-});
-var jenkinsHueCongstarTeam14 = new JenkinsHue({
-    jenkins: {
-        host: 'http://congostar-congo-ci.proxy/view/Congo%20Monitoring/view/Team%2014/'
     },
     hue: {
         host: '10.165.103.252',
@@ -123,7 +113,6 @@ function updateLights() {
     jenkinsHueCongstarTeam7.setLightForJenkinsView(LIGHT_ID_TABLE_BILAL);
     jenkinsHueCongstarTeam7.setLightForJenkinsView(LIGHT_ID_TABLE_FLORIAN);
     jenkinsHueCongstarTeam12.setLightForJenkinsView(LIGHT_ID_TABLE_TORSTEN);
-    jenkinsHueCongstarTeam14.setLightForJenkinsView(LIGHT_ID_TEAM_14);
     jenkinsHueCongstarTeam3.setLightForJenkinsView(LIGHT_ID_TEAM_3);
     jenkinsHueCobraAwDev.setLightForJenkinsView(LIGHT_ID_TABLE_COBR_AW_1);
     jenkinsHueCobraAwTa.setLightForJenkinsView(LIGHT_ID_TABLE_COBR_AW_2);
@@ -142,7 +131,6 @@ function switchLightsOff() {
     jenkinsHueCongstarTeam7.hue.switchOff(LIGHT_ID_TABLE_BILAL);
     jenkinsHueCongstarTeam7.hue.switchOff(LIGHT_ID_TABLE_FLORIAN);
     jenkinsHueCongstarTeam12.hue.switchOff(LIGHT_ID_TABLE_TORSTEN);
-    jenkinsHueCongstarTeam14.hue.switchOff(LIGHT_ID_TEAM_14);
     jenkinsHueCongstarTeam3.hue.switchOff(LIGHT_ID_TEAM_3);
     jenkinsHueCobraAwDev.hue.switchOff(LIGHT_ID_TABLE_COBR_AW_1);
     jenkinsHueCobraAwTa.hue.switchOff(LIGHT_ID_TABLE_COBR_AW_2);
