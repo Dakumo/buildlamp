@@ -15,8 +15,9 @@ var LIGHT_ID_TABLE_SILAS = 5;
 var LIGHT_ID_TABLE_TORSTEN = 7;
 
 var LIGHT_ID_PIPELINE = 8;
-var LIGHT_ID_TEAM_3 = 9;
+var LIGHT_ID_TEAM_3 = 13;
 var LIGHT_ID_DONNA_TEAM_12 = 12;
+var LIGHT_ID_TEAM_14 = 9;
 
 /// congo
 var jenkinsHueCongstarTeam3 = new JenkinsHue({
