@@ -6,8 +6,6 @@ var moment = require('moment');
 var INTERVAL = 15 * 1000;
 var switchedOn = true;
 
-var LIGHT_ID_TABLE_BILAL = 2;
-var LIGHT_ID_TABLE_FLORIAN = 3;
 var LIGHT_ID_TABLE_COBR_AW_1 = 6;
 var LIGHT_ID_TABLE_COBR_AW_2 = 10;
 var LIGHT_ID_TABLE_SILAS = 5;
@@ -23,15 +21,6 @@ var jenkinsHueCongstarTeam3 = new JenkinsHue({
     jenkins: {
         // API Token authentication, password in PWD
         host: 'http://congostar-congo-ci.proxy/view/Congo%20Monitoring/view/Team%203/'
-    },
-    hue: {
-        host: '10.165.103.252',
-        username: 'newdeveloper'
-    }
-});
-var jenkinsHueCongstarTeam7 = new JenkinsHue({
-    jenkins: {
-        host: 'http://congostar-congo-ci.proxy/view/Congo%20Monitoring/view/Team%207/'
     },
     hue: {
         host: '10.165.103.252',
@@ -97,11 +86,7 @@ var jenkinsHueApp = new JenkinsHue({
     }
 });
 
-
-
 function updateLights() {
-    jenkinsHueCongstarTeam7.setLightForJenkinsView(LIGHT_ID_TABLE_BILAL);
-    jenkinsHueCongstarTeam7.setLightForJenkinsView(LIGHT_ID_TABLE_FLORIAN);
     jenkinsHueCongstarTeam12.setLightForJenkinsView(LIGHT_ID_TABLE_TORSTEN);
     jenkinsHueCongstarTeam3.setLightForJenkinsView(LIGHT_ID_TEAM_3);
     jenkinsHueCobraAwDev.setLightForJenkinsView(LIGHT_ID_TABLE_COBR_AW_1);
@@ -117,8 +102,6 @@ function switchLightsOn() {
 }
 
 function switchLightsOff() {
-    jenkinsHueCongstarTeam7.hue.switchOff(LIGHT_ID_TABLE_BILAL);
-    jenkinsHueCongstarTeam7.hue.switchOff(LIGHT_ID_TABLE_FLORIAN);
     jenkinsHueCongstarTeam12.hue.switchOff(LIGHT_ID_TABLE_TORSTEN);
     jenkinsHueCongstarTeam3.hue.switchOff(LIGHT_ID_TEAM_3);
     jenkinsHueCobraAwDev.hue.switchOff(LIGHT_ID_TABLE_COBR_AW_1);
