@@ -18,37 +18,9 @@ var displayResult = function(result) {
     console.log(JSON.stringify(result, null, 2));
 };
 
-var auth = function(req, res, runFunction) {
-	var token = req.query.token;
-	if (token === "access_token") {
-		runFunction()
-	} else {
-		res.send("Access denied");
-	}
-};
-
-var changeState = function(updatedState) {
-	for (var [key, value] of lampList.entries()) {
-		api.setLightState(value, updatedState, function(err, result) {
-			if (err) throw err;
-			displayResult(result);
-		});
-	}
-}
-
 app.get('/', function (req, res) {
   	auth(req,res, () => res.send("Access allowed"))
 });
-
-app.get('/on', function (req, res) {
-	auth(req,res, () => changeState(state.on().rgb(0,255,0)))
-});
-
-app.get('/off', function (req, res) {
-	auth(req,res, () => changeState(state.off()))
-
-});
-
 
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!');
